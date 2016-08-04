@@ -38,7 +38,7 @@
 /* Begin PBXFileReference section */
 		A015FA821D51BD05005A2185 /* MartinsSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MartinsSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A015FA851D51BD06005A2185 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A015FA871D51BD06005A2185 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A015FA871D51BD06005A2185 /* ViewController.swift */ = {isa = PBXFileReference; indentWidth = 5; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A015FA8A1D51BD06005A2185 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A015FA8D1D51BD06005A2185 /* MartinsSample.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MartinsSample.xcdatamodel; sourceTree = "<group>"; };
 		A015FA8F1D51BD06005A2185 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -490,6 +490,7 @@
 				A015FAAF1D51BD06005A2185 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A015FAB01D51BD06005A2185 /* Build configuration list for PBXNativeTarget "MartinsSampleTests" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +499,7 @@
 				A015FAB21D51BD06005A2185 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A015FAB31D51BD06005A2185 /* Build configuration list for PBXNativeTarget "MartinsSampleUITests" */ = {
 			isa = XCConfigurationList;
@@ -506,6 +508,7 @@
 				A015FAB51D51BD06005A2185 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

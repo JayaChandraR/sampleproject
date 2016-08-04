@@ -25,6 +25,7 @@ class ViewController: UIViewController {
         self.SearchResults.layer.borderWidth = 1
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(ViewController.dismissKeyboard))
         view.addGestureRecognizer(tap)
+     print("Working")
     }
     func dismissKeyboard() {
         //Causes the view (or one of its embedded text fields) to resign the first responder status.
