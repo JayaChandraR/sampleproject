@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="YSr-Ql-prC">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MartinsSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" searchBarStyle="prominent" text="" placeholder="What are looking for?" translatesAutoresizingMaskIntoConstraints="NO" id="d4h-d9-dOO">
+                                <rect key="frame" x="0.0" y="64" width="600" height="44"/>
+                                <color key="barTintColor" red="0.95686274509803926" green="0.0" blue="0.14901960784313725" alpha="1" colorSpace="calibratedRGB"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                <scopeButtonTitles>
+                                    <string>Title</string>
+                                    <string>Title</string>
+                                </scopeButtonTitles>
+                            </searchBar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R0R-Ka-8TU">
+                                <rect key="frame" x="545" y="64" width="24" height="44"/>
+                                <state key="normal" image="Barcode"/>
+                                <connections>
+                                    <action selector="BarcodeScanner:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AVo-LV-fff"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.96796043880000004" green="0.96796043880000004" blue="0.96796043880000004" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="d4h-d9-dOO" secondAttribute="trailing" constant="-20" id="1YO-u3-yJc"/>
+                            <constraint firstItem="d4h-d9-dOO" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="SZY-dG-tsW"/>
+                            <constraint firstItem="R0R-Ka-8TU" firstAttribute="top" secondItem="d4h-d9-dOO" secondAttribute="top" id="atZ-kw-ILj"/>
+                            <constraint firstItem="R0R-Ka-8TU" firstAttribute="bottom" secondItem="d4h-d9-dOO" secondAttribute="bottom" id="dzr-v6-wx7"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="R0R-Ka-8TU" secondAttribute="trailing" constant="11" id="ffg-Dz-Kul"/>
+                            <constraint firstItem="d4h-d9-dOO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="lgL-jX-gai"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="xjG-bX-qbf"/>
+                    <connections>
+                        <outlet property="SearchResults" destination="d4h-d9-dOO" id="ifk-r6-l49"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1331" y="417"/>
+        </scene>
+        <!--Scanner View Controller-->
+        <scene sceneID="OMj-1t-Qor">
+            <objects>
+                <viewController id="h2Y-iI-3iN" customClass="scannerViewController" customModule="MartinsSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0lA-P3-zou"/>
+                        <viewControllerLayoutGuide type="bottom" id="4lx-cb-tCZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="PE5-BM-jnj">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BarRect" translatesAutoresizingMaskIntoConstraints="NO" id="Yos-rT-Cqr">
+                                <rect key="frame" x="188" y="189" width="225" height="221"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="221" id="8Sq-pc-LBd"/>
+                                    <constraint firstAttribute="width" constant="225" id="PAT-Vi-QZ1"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="barRed" translatesAutoresizingMaskIntoConstraints="NO" id="Mjc-wN-N2C">
+                                <rect key="frame" x="208" y="368" width="186" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="186" id="J43-WT-lsw"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.003605929833" green="0.93716273449999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Mjc-wN-N2C" firstAttribute="top" secondItem="0lA-P3-zou" secondAttribute="bottom" constant="348" id="3Ss-tz-dzM"/>
+                            <constraint firstItem="Mjc-wN-N2C" firstAttribute="centerX" secondItem="Yos-rT-Cqr" secondAttribute="centerX" id="8zS-kJ-fqc"/>
+                            <constraint firstItem="Mjc-wN-N2C" firstAttribute="top" secondItem="0lA-P3-zou" secondAttribute="bottom" constant="348" id="GBh-8q-cVU"/>
+                            <constraint firstItem="Yos-rT-Cqr" firstAttribute="centerX" secondItem="PE5-BM-jnj" secondAttribute="centerX" id="H7d-s9-dhc"/>
+                            <constraint firstItem="Mjc-wN-N2C" firstAttribute="centerX" secondItem="Yos-rT-Cqr" secondAttribute="centerX" id="WRi-Of-LmC"/>
+                            <constraint firstItem="Mjc-wN-N2C" firstAttribute="leading" secondItem="Yos-rT-Cqr" secondAttribute="trailing" constant="-206" id="eKe-qQ-S97"/>
+                            <constraint firstItem="Yos-rT-Cqr" firstAttribute="centerY" secondItem="PE5-BM-jnj" secondAttribute="centerY" id="gYF-cs-E0r"/>
+                            <constraint firstItem="4lx-cb-tCZ" firstAttribute="top" secondItem="Mjc-wN-N2C" secondAttribute="bottom" constant="210" id="uUQ-eL-hbS"/>
+                            <constraint firstItem="Yos-rT-Cqr" firstAttribute="leading" secondItem="PE5-BM-jnj" secondAttribute="leadingMargin" constant="168" id="zrK-dx-fpk"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="3Ss-tz-dzM"/>
+                                <exclude reference="WRi-Of-LmC"/>
+                                <exclude reference="eKe-qQ-S97"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="scanBorderImageView" destination="Yos-rT-Cqr" id="Whc-Uf-k5C"/>
+                        <outlet property="scanningImageView" destination="Mjc-wN-N2C" id="kCg-HY-mjO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2tc-s3-IEm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1969" y="417"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="nRp-E5-cmn">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="YSr-Ql-prC" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="VEN-Ae-ILe">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="QsW-s4-6Om"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="P2X-I0-quU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="340" y="1089"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="BarRect" width="408" height="409"/>
+        <image name="Barcode" width="24" height="24"/>
+        <image name="barRed" width="374" height="32"/>
+    </resources>
+</document>
